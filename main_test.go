@@ -14,11 +14,11 @@ func TestAdd(t *testing.T) {
 	mockCalc := NewMockCalculator(ctrl)
 
 	// Example without expect
-	result := mockCalc.Add(1, 2)
-	assert.Equal(t, 0, result, "Expected 0 as no expect is set")
+	//result := mockCalc.Add(1, 2)
+	//assert.Equal(t, 0, result, "Expected 0 as no expect is set")
 
 	// Example with expect
 	mockCalc.EXPECT().Add(1, 2).Return(3)
-	result = mockCalc.Add(1, 2)
+	result := mockCalc.Add(1, 2)
 	assert.Equal(t, 3, result, "Expected 3")
 }

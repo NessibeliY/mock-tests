@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-type Calculator interface {
-	Add(a, b int) int
-}
-
 type SimpleCalculator struct{}
 
 func (sc SimpleCalculator) Add(a, b int) int {
